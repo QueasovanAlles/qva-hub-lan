@@ -1,0 +1,31 @@
+{
+  "name": "qvahub-lan",
+  "version": "1.0.0",
+  "description": "QvA Hub for Local Area Network usage.",
+  "main": "server.js",
+  "bin": "server.js",
+  "pkg": {
+    "assets": [
+      "../QvAHub-monitor/dist/qvahub-monitor/**/*"
+    ],
+    "targets": [
+      "node16-win-x64"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js --port 52330",
+    "build-exe": "pkg . --output dist/release/win-64/QvAHubLan.exe --targets node18-win-x64"
+  },
+  "author": "queasovanalles",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^4.16.3",
+    "express-session": "^1.18.1",
+    "express-ws": "^5.0.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
